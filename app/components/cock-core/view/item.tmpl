@@ -1,0 +1,20 @@
+<table cellpadding="0" cellspacing="0" border="0" class="ck-table" id="item-{{index}}" runjs-var="{{cols=colsp(all[index][1].length, ratio)}}">
+    <tr>
+        <th colspan="{{cols}}">
+            {{if parent}}
+            <label><input type="{{if multi > 1}}checkbox{{else}}radio{{/if}}" class="isTitle" value="{{all[index][0]}}" {{if inArray(all[index][0], hit)>=0}}checked{{/if}}>{{type[all[index][0]]}}</label>
+            {{else}}
+                <em style="padding-left:9px">{{type[all[index][0]]}}</em>
+            {{/if}}
+        </th>
+    </tr>
+    <tr>
+        {{each all[index][1] as item i}}
+            {{if i > 0 && i % cols == 0}}</tr>{{if i < all[index][1].length - 1}}<tr>{{/if}}{{/if}}
+            <td>
+				<label><input type="{{if multi > 1}}checkbox{{else}}radio{{/if}}" value="{{item}}" {{if inArray(item, hit) >= 0}}checked{{/if}}>{{raw[item]}}</label>
+			</td>
+            {{if i == all[index][1].length - 1 && (i+1) % cols > 0}}<td colspan="{{cols-(i+1)%cols}}"></td>{{/if}}
+        {{/each}}
+    </tr>
+</table>

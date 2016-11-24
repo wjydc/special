@@ -1,0 +1,380 @@
+.top_box {
+  height: 29px;
+  background: #f4f4f4;
+  border-bottom: solid 1px #e5e5e5;
+  color: #999;
+  position: relative;
+  z-index: 9;
+  font-size: 12px;
+  a {
+    color: #999;
+    &:hover {
+      color: #ef8217;
+      text-decoration: underline;
+    }
+  }
+  .top-item {
+    float: left;
+    color: #999;
+    height: 28px;
+    line-height: 28px;
+    padding: 1px 6px 0;
+    position: relative;
+    .arrow {
+      -webkit-transition: -webkit-transform .2s ease-in;
+      transition: transform .2s ease-in;
+    }
+    &:hover {
+      .arrow {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .top-item-box {
+    top: 28px;
+    left: 0px;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    z-index: 10;
+    -webkit-box-shadow: 0px 2px 2px #ccc;
+    -moz-box-shadow: 0px 2px 2px #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    display: none;
+  }
+  .top_box_con {
+    width: 990px;
+    height: 29px;
+    margin: auto;
+    a {
+      cursor: pointer;
+    }
+  }
+  .top_box_left {
+    float: left;
+    margin-left: 15px;
+  }
+  .top_box_right {
+    float: right;
+    margin-right: 15px;
+  }
+  .top-icon {
+    display: inline-block;
+    width: 24px;
+    height: 100%;
+    vertical-align: top;
+    margin: 0 -3px;
+    &.mobile {
+      background: url(mobile.png) no-repeat center;
+    }
+    &.weixin {
+      background: url(weixin.png) no-repeat center;
+    }
+    &.weibo {
+      background: url(weibo.png) no-repeat center;
+    }
+  }
+  .arrow {
+    display: inline-block;
+    width: 10px;
+    height: 100%;
+    vertical-align: top;
+    background: url(arrow.png) no-repeat center;
+  }
+  .splitline {
+    float: left;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    margin: 9px 3px 0;
+  }
+  .register {
+    width: 73px;
+    a {
+      display: block;
+      padding: 0 6px;
+    }
+  }
+  .weixin-box {
+    width: 192px;
+    text-align: center;
+    left: -48px;
+    img {
+      margin: 15px auto 0 auto;
+      width: 160px;
+      display: block;
+      border: none;
+    }
+  }
+  .weibo-box {
+    border: 1px solid #ffe3b3;
+    background: #fffcf5;
+    padding: 10px 10px 0 10px;
+    left: -36px;
+  }
+  .mobile-box {
+    width: 198px;
+    z-index: 1000;
+    border: 1px solid #ccc;
+    left: -14px;
+    top: 28px;
+    .mobile_box_top {
+      background: #f3f3f3;
+      padding: 15px 20px;
+    }
+    .mobile_box_top img {
+      width: 37px;
+      height: 48px;
+      position: absolute;
+    }
+    .mobile_box_top .mbt_con1 {
+      padding-left: 60px;
+      margin-top: 5px;
+      line-height: 18px;
+      text-align: left;
+    }
+    .mobile_box_top .mbt_con2 {
+      line-height: 18px;
+      margin-bottom: 5px;
+      padding-right: 13px;
+      text-align: right;
+    }
+    .mobile_box_body {
+      width: 178px;
+      background: #fff;
+      padding: 5px 10px;
+      line-height: 24px;
+      .mobile_bb_f01 {
+        font-size: 14px;
+      }
+      .m_all_c {
+        margin: auto;
+        width: 160px;
+        display: block;
+      }
+    }
+  }
+  .top-hot-area {
+    width: 198px;
+    padding: 5px 0 5px 5px;
+    top: 28px;
+    left: -136px;
+    a {
+      float: left;
+      margin-right: 5px;
+      padding: 0 10px;
+    }
+    .link-more {
+      float: right;
+      color: #ef8217;
+    }
+  }
+
+  .top-logged {
+    span, a {
+      margin: 0 3px; 
+    }
+    .user-name {
+      margin: 0;
+      color: #ef8217;
+    }
+    .user-page {
+      color: #333;
+    }
+  }
+}
+
+// .ve-w-top {
+//   height: 29px;
+//   background: #f4f4f4;
+//   border-bottom: solid 1px #e5e5e5;
+//   color: #999;
+//   // font-family: 'microsoft yahei';
+//   position: relative;
+//   z-index: 9;
+//   .pr {
+//     position: relative;
+//   }
+//   .pa {
+//     position: absolute;
+//   }
+//   .dis_n {
+//     display: none;
+//   }
+//   .dis_lb {
+//     display: inline-block;
+//   }
+//   .m_all_c {
+//     margin: 0 auto;
+//   }
+//   img {
+//     display: block;
+//     border: none;
+//   }
+//   .color_main {
+//     color: #ef8217;
+//   }
+//   .top_box_con {
+//     width: 960px;
+//     padding: 0 15px;
+//     line-height: 29px;
+//     margin: auto;
+//     font-size: 12px;
+//     a {
+//       font-size: 12px;
+//       cursor: pointer;
+//     }
+//   }
+//   .top_bc_tit {
+//     padding-right: 10px;
+//   }
+//   a {
+//     text-decoration: none;
+//     padding: 0 10px;
+//     line-height: 29px;
+//     color: #999;
+//   }
+//   a:hover {
+//     color: #666;
+//     text-decoration: underline;
+//   }
+//   .top_tit_02 .col_333:hover {
+//     color: #333;
+//   }
+//   .top_bc_right {
+//     float: right;
+//     *margin-top: -30px;
+//   }
+//   .top_bc_right a {
+//     display: inline-block;
+//     vertical-align: middle;
+//   }
+//   .top_bc_right .top_bch_imgbtn {
+//     padding: 0px;
+//     width: 25px;
+//     height: 24px;
+//   }
+//   .top_bc_right .top_bchib_fir {
+//     width: 60px;
+//     padding-left: 24px;
+//     line-height: 24px;
+//   }
+//   .top_bc_right .hot_add_btn {
+//     border-left: solid 1px #ddd;
+//     line-height: 29px;
+//     vertical-align: 1px;
+//   }
+//   .top_bc_right .hab_btn {
+//     padding: 0 10px;
+//     *display: inline;
+//     *zoom: 1;
+//   }
+//   .top_bc_right .qzone_btn {
+//     background: url(icon.png) no-repeat 0px -51px;
+//   }
+//   .top_bc_right .weibo {
+//     background: url(icon.png) no-repeat 5px -80px;
+//   }
+//   .top_bc_right .weixin {
+//     background: url(icon.png) no-repeat 0px -108px;
+//   }
+//   .top_bc_right .mobile {
+//     background: url(icon.png) no-repeat 6px -22px;
+//   }
+//   .top_bc_right .hot_add_btn .top_bc_hotAdd_icon {
+//     background: url(icon.png) no-repeat 4px -144px;
+//     margin-top: 5px;
+//     *margin-top: -10px;
+//     height: 10px;
+//     width: 15px;
+//     -webkit-transition: -webkit-transform .2s ease-in;
+//     transition: transform .2s ease-in;
+//   }
+//   .top_bc_right .hot_add_btn:hover .top_bc_hotAdd_icon {
+//     transform: rotate(180deg);
+//     -moz-transform: rotate(180deg);
+//     -webkit-transform: rotate(180deg);
+//     -ms-transform: rotate(180deg);
+//   }
+//   .mobile_box {
+//     width: 198px;
+//     z-index: 1000;
+//     border: 1px solid #ccc;
+//     right: 218px;
+//     top: 28px;
+//   }
+//   .mobile_box .mobile_box_top {
+//     background: #f3f3f3;
+//     padding: 15px 20px;
+//   }
+//   .mobile_box .mobile_box_top img {
+//     width: 37px;
+//     height: 48px;
+//   }
+//   .mobile_box .mobile_box_top .mbt_con1 {
+//     padding-left: 60px;
+//     margin-top: 5px;
+//     line-height: 18px;
+//     text-align: left;
+//   }
+//   .mobile_box .mobile_box_top .mbt_con2 {
+//     line-height: 18px;
+//     margin-bottom: 5px;
+//     padding-right: 13px;
+//     text-align: right;
+//   }
+//   .mobile_box .mobile_box_body {
+//     width: 178px;
+//     background: #fff;
+//     padding: 5px 10px;
+//     line-height: 24px;
+//   }
+//   .mobile_box .mobile_box_body .mobile_bb_f01 {
+//     font-size: 14px;
+//   }
+//   .weixin_box {
+//     width: 198px;
+//     z-index: 5000;
+//     background: #fff;
+//     border: 1px solid #ccc;
+//     right: 130px;
+//     top: 28px;
+//     line-height: 32px;
+//     text-align: center;
+//   }
+//   .weixin_box img {
+//     margin: 15px auto 0 auto;
+//     width: 160px;
+//   }
+//   .top_box_con .weibo_box {
+//     border: 1px solid #ffe3b3;
+//     z-index: 5000;
+//     background: #fffcf5;
+//     padding: 10px 10px 0 10px;
+//     top: 28px;
+//     right: 125px;
+//   }
+//   .top_box_con .qzone_box {
+//     border: 1px solid #ffe3b3;
+//     z-index: 5000;
+//     background: #fffcf5;
+//     padding: 10px 10px 0 10px;
+//     top: 28px;
+//     right: 115px;
+//   }
+//   .top_box_con .hot_add_box {
+//     width: 198px;
+//     background: #fff;
+//     z-index: 5000;
+//     padding: 10px;
+//     border: 1px solid #ccc;
+//     top: 28px;
+//     right: 10px;
+//   }
+//   .top_box_con .hot_add_box a:hover {
+//     color: #ef8217;
+//   }
+// }

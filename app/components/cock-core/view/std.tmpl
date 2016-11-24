@@ -1,0 +1,7 @@
+<div class="ck-std-list">
+	{{each hit as item}}
+		{{if item!=''}}
+		<label><input type="checkbox" {{if type[item]}}class="isTitle"{{/if}} value="{{item}}" checked>{{type[item]||raw[item]}}</label>
+		{{/if}}
+	{{/each}}
+</div>

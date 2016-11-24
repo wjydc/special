@@ -1,0 +1,52 @@
+.w-tags {
+  background: #f1f1f1;
+  // padding-left: 5%;
+  .tags-list {
+    padding-top: 23px;
+    margin: auto;
+    overflow: hidden;
+    width: 978px;
+    @media (max-width: 640px) {
+      width: 96%;
+      box-sizing: border-box;
+      padding: 11px 0 2px;
+      margin: auto;
+    }
+    .tags-box {
+      margin-right: -30px;
+      overflow: hidden;
+    }
+    a {
+      float: left;
+      width: 112px;
+      height: 35px;
+      border: 1px solid #b8b8b8;
+      margin: 0 30px 23px 0;
+      font-size: 16px;
+      line-height: 35px;
+      text-align: center;
+      color: #666;
+      background: url(tagsbg.png);
+      border-radius: 15px;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: background .2s, color .2s;
+      @media (max-width: 640px) {
+        margin: 0 3% 9px;
+        width: 25%;
+        box-sizing: border-box;
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+      }
+      &:hover,
+      &.active {
+        border-color: #f1a038;
+        background: #f1a038;
+        color: #fff;
+      }
+    }
+  }
+}

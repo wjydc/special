@@ -1,0 +1,22 @@
+{{if $page > 1}}<a href="javascript:" class="page-start">{{$page - 1}}</a>{{/if}}
+
+{{if $page > 1}}<a href="javascript:">1</a>{{/if}}
+
+{{if $page > 4}}<span>...</span>{{/if}}
+
+{{if $page > 3}}<a href="javascript:">{{$page - 2}}</a>{{/if}}
+{{if $page > 2}}<a href="javascript:">{{$page - 1}}</a>{{/if}}
+
+<em class="page-select">{{$page}}</em>
+
+{{if $page < $all - 1}}<a href="javascript:">{{$page + 1}}</a>{{/if}}
+{{if $page < $all - 2}}<a href="javascript:">{{$page + 2}}</a>{{/if}}
+
+{{if $page < $all - 3}}<span>...</span>{{/if}}
+
+{{if $page < $all}}<a href="javascript:">{{$all}}</a>{{/if}}
+
+{{if $page < $all}}<a href="javascript:" class="page-end">{{$page + 1}}</a>{{/if}}
+
+<input name="" type="text" class="page-text">
+<input name="" type="button" class="page-btn">

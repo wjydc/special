@@ -1,0 +1,58 @@
+<!DOCTYPE html>  
+<html style="overflow:hidden;">  
+<head>  
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>bdMap</title>  
+<style type="text/css">  
+html{height:100%;}  
+body{height:100%;margin:0px;padding:0px}  
+#container{height:100%}  
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=YyQoih6tcgWdMBPhCsNzMCZcO8S6jZyT">
+//v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+//v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
+</script>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css"/>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+</head>  
+ 
+<body style="min-width:inherit;">  
+<div id="container"></div>
+
+<script src="//f3.v.veimg.cn/f2e/gallery/jquery/1.11.1/jquery-1.11.1.min.js"></script>
+
+<script type="text/javascript">
+
+  // console.log( document.domain )
+  var BMAP_CONFIG = window.parent.BMAP_CONFIG;
+
+  // 百度地图API功能
+  var sContent = '<div style="width:450px">' +
+    "<img style='float:right;margin:10px 0 0 10px' id='imgDemo' src='" + BMAP_CONFIG.logo + "' width='198' height='128' title='" + BMAP_CONFIG.hotel + "'/>" +
+    "<h4 style='margin:0 0 5px 0;padding:0.2em 0;font-size:14px'>" + BMAP_CONFIG.hotel + "</h4>" + 
+    "<p style='margin:0;line-height:1.5;font-size:13px;font-size:14px;'>" +
+      '地址：' + BMAP_CONFIG.address + '<br/>' +
+      '电话：' + BMAP_CONFIG.call +
+    "</p>" + 
+  "</div>";
+  var map = new BMap.Map("container");
+  map.enableScrollWheelZoom();
+  map.addControl(new BMap.ScaleControl());
+  var point = new BMap.Point(BMAP_CONFIG.x, BMAP_CONFIG.y);
+  var marker = new BMap.Marker(point);
+  var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+  map.centerAndZoom(point, 15);
+  map.addOverlay(marker);
+  marker.addEventListener("click", function(){          
+    this.openInfoWindow(infoWindow);
+    //图片加载完毕重绘infowindow
+    $('#imgDemo').on('load', function () {
+      infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+    })
+  });
+
+</script>  
+
+</body>  
+</html>

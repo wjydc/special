@@ -1,0 +1,133 @@
+.w-screen {
+  width: 988px;
+  margin: auto;
+  padding: 7px 0;
+  margin: 18px auto 30px;
+  border: 1px solid #f0f0f0;
+  background: #f9f9f9;
+  a {
+    color: #555;
+  }
+  .child-screen {
+    height: 42px;
+    .child-box {
+      margin: auto;
+      font-size: 14px;
+      color: #555;
+      line-height: 24px;
+      padding: 9px 20px 0 20px;
+    }
+    &.active {
+      position: relative;
+      .child-box {
+        background: #fff;
+        border: 1px solid #f0f0f0;
+        margin: 0 -1px;
+        padding-top: 8px;
+        position: relative;
+        z-index: 1;
+      }
+      &:after {
+        content: '';
+        display: block;
+        border-top: 1px dashed #e4e4e4;
+        position: absolute;
+        top: 43px;
+        left: 18px;
+        width: 952px;
+        z-index: 1;
+      }
+      .more-show:after {
+        content: '▲';
+      }
+      .child {
+        height: auto;
+      }
+    }
+    span {
+      float: left;
+    }
+    strong {
+      float: left;
+      width: 72px;
+      height: 24px;
+      font-weight: normal;
+    }
+    .more-show {
+      float: right;
+      cursor: pointer;
+      &:after {
+        content: '▼';
+        color: #f0841e;
+        font-size: 12px;
+      }
+    }
+    .child {
+      display: inline-block;
+      overflow: hidden;
+      margin-bottom: -12px;
+      height: 42px;
+      .unlimited,
+      .child-all {
+        float: left;
+      }
+      a {
+        display: inline-block;
+        padding: 0 11px;
+        margin: 0 13px 12px 0;
+        &:hover,
+        &.active {
+          text-decoration: none;
+          background: #f0841e;
+          color: #fff;
+        }
+        &:first-child {
+          margin-bottom: 21px;
+        }
+      }
+    }
+    .child-all {
+      width: 750px;
+    }
+    &.open {
+      background: #fff;
+      .child-all {
+        margin-left: 63px;
+      }
+    }
+  }
+}
+
+.drops {
+  background: #f9f9f9;
+  cursor: default;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .select {
+    float: left;
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+    color: #999;
+    padding: 0 39px 0 7px;
+    border: 1px solid #dedede;
+    background: url(drop.png) no-repeat right 0;
+    background-color: #fff;
+    margin-right: 10px;
+    min-width: 56px;
+    margin-top: -1px;
+    &.active {
+      background-position: right -28px;
+    }
+    &.isSet {
+      color: #333;
+    }
+    i {
+      width: 100%;
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="feedback.css">
+</head>
+
+<body>
+
+  <div class="feedback">
+    <div class="feedback-top">
+      <span class="feedback-close"></span>
+    </div>
+    <div class="feedback-main">
+      <form action="" enctype="multipart/form-data">
+        <div class="feedback-item">
+          <textarea name="feedback-text" id="" cols="30" rows="10" placeholder="请输入你的建议意见，快来喷我好吗？产品不好用，页面不好看，功能有Bug，内容太少？只要有你不爽的地方均可以反馈给我们"></textarea>
+        </div>
+        <div class="feedback-item">
+          <input type="file" name="feedback-file" id="feedback-file">
+          <label for="feedback-file" class="feedback-file-show">点击上传文件</label>
+          <span class="feedback-span">格式：word文档，压缩包，图片等。可不上传</span>
+        </div>
+        <div class="feedback-item">
+          <input type="text" name="feedback-phone" id="feedback-phone" placeholder="请输入您的手机号，方便我们联系您兑奖" maxlength="11">
+        </div>
+        <input type="hidden" name="redirect">
+        <input type="submit" id="feedback-submit">
+      </form>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

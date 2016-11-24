@@ -1,0 +1,46 @@
+.w-header {
+  background: #f9f9f9 url(bg-fs8.png) no-repeat bottom center;
+  border-bottom: 1px solid #e7e8ea;
+  .header-box {
+    width: 990px;
+    margin: auto;
+  }
+  .logo {
+    float: left;
+    margin-left: 10px;
+    img {
+      display: block;
+    }
+  }
+  .ve-nav-mini {
+    float: right;
+    margin: 50px 14px 0 0;
+  }
+}
+
+@fontc: #666;
+@fontsize: 14px;
+.ve-nav-mini {
+  .list,
+  a {
+    font-size: @fontsize;
+    color: @fontc;
+  }
+  .list {
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  i {
+    padding: 0 10px;
+  }
+  a {
+    display: inline-block;
+    padding: 0 6px;
+    line-height: 1.8em;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

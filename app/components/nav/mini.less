@@ -1,0 +1,27 @@
+@fontc: #666;
+@fontsize: 14px;
+
+.ve-nav-mini {
+  .list, a {
+    font-size: @fontsize;;
+    color: @fontc;
+  }
+  .list {
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  i {
+    padding: 0 10px;
+  }
+  a {
+    display: inline-block;
+    padding: 0 6px;
+    line-height: 1.8em;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+

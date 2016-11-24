@@ -1,0 +1,108 @@
+.w-tabmenu {
+  width: 990px;
+  margin: auto;
+  border-bottom: 2px solid #ef8217;
+  position: relative;
+  font-size: 14px;
+  .tabmenu {
+    float: left;
+    margin: 0;
+    overflow: hidden;
+    background: #dedede;
+    a {
+      display: block;
+      color: #333;
+    }
+    li {
+      float: left;
+      width: 96px;
+      height: 38px;
+      line-height: 38px;
+      text-align: center;
+      border-top: 1px solid #dedede;
+      margin-right: 1px;
+      background: #fff;
+      &:first-child {
+        border-left: 1px solid #dedede;
+      }
+      &.hover a, &.active a {
+        background: #ef8217;
+        border-top-color: #ef8217;
+        color: #fff;
+        cursor: default;
+        -webkit-transition: background-color .2s;
+        -moz-transition: background-color .2s;
+        -ms-transition: background-color .2s;
+        -o-transition: background-color .2s;
+        transition: background-color .2s;
+        &:first-child {
+          border-left: 1px solid #ef8217;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  
+  .tabright {
+    position: absolute;
+    height: 20px;
+    padding: 9px 10px 9px 11px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    .page {
+      .page-go {
+        input {
+          width: 42px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
+  .w-tab-show {
+    float: right;
+    margin: 10px 11px 0 0;
+    .w-page-inner {
+      line-height: 20px;
+    }
+  }
+
+
+  .joblist-style {
+    float: right;
+    margin: 9px 5px 0 0;
+    vertical-align: top;
+    span {
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    i {
+      display: inline-block;
+      width: 16px;
+      height: 15px;
+      background: url(1-1.png);
+      vertical-align: -3px;
+      margin-right: 1px;
+    }
+    .action {
+      i {
+        background: url(1-2.png);
+      }
+    }
+    .wtm-whole {
+      i{
+        background: url(2-1.png);
+      }
+      &.action {
+        i {
+          background: url(2-2.png);
+        }
+      }
+    }
+  }
+}

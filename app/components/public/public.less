@@ -1,0 +1,148 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  min-width: 1000px;
+  @media (max-width: 640px) {
+    min-width: initial;
+  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // font-family: 'microsoft yahei', arial, 'STXihei';
+}
+
+
+/*body, a {
+  font-size: 14px;
+  color: #666;
+}*/
+
+.ve-nav-default .list a.active {
+  color: #fff;
+}
+
+input {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #a0a0a0;
+}
+
+:-moz-placeholder {
+  color: #a0a0a0;
+}
+
+::-moz-placeholder {
+  color: #a0a0a0;
+}
+
+:-ms-input-placeholder {
+  color: #a0a0a0;
+}
+
+.placeholder {
+  color: #a0a0a0;
+}
+
+.index-main {
+  width: 990px;
+  margin: 0 auto 42px;
+  .m-left {
+    float: left;
+    width: 740px;
+  }
+  .m-right {
+    width: 220px;
+    float: right;
+    margin-top: 63px;
+    a,
+    img {
+      display: block;
+      width: 100%;
+    }
+    a {
+      margin-bottom: 10px;
+      &.last {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.layui-layer-message {
+  .info {
+    overflow: hidden;
+    em {
+      float: left;
+      margin-bottom: 1px;
+      font-weight: bold;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.btn-n1 {
+  display: inline-block;
+  background-color: #fcfcfb;
+  background: url(btn-n1.png) repeat-x 1px 1px;
+  height: 24px;
+  vertical-align: top;
+  text-align: center;
+  color: #666;
+  line-height: 24px;
+  padding: 1px 16px;
+  border: 1px solid #dedede;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+.wukong-btn {
+  border: 5px solid #fff3cf;
+  background: #ffd542 url(wukong-bg.png);
+  border-radius: 999px;
+  padding: 13px;
+  color: #792800;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 10px;
+  em {
+    font-weight: bold;
+  }
+  table {
+    width: 100%;
+    td {
+      padding: 0 5px 0;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      background: #e0333a;
+      display: inline-block;
+      border-radius: 999px;
+      width: 116px;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 34px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.content a {
+  text-decoration: none;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: Arial, Helvetica, 'microsoft yahei', 'STXihei';
+  line-height: 26em / 14;
+}

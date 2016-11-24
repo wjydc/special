@@ -1,0 +1,44 @@
+.w-header {
+  width: 990px;
+  margin: auto;
+  background: url(bg.jpg) no-repeat bottom center;
+  .logo {
+    float: left;
+    width: 160px;
+    img {
+      display: block;
+    }
+  }
+  .ve-nav-mini {
+    float: right;
+    margin: 50px 14px 0 0;
+  }
+}
+
+@fontc: #666;
+@fontsize: 14px;
+
+.ve-nav-mini {
+  .list, a {
+    font-size: @fontsize;;
+    color: @fontc;
+  }
+  .list {
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  i {
+    padding: 0 10px;
+  }
+  a {
+    display: inline-block;
+    padding: 0 6px;
+    line-height: 1.8em;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+

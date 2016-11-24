@@ -1,0 +1,66 @@
+<div class="ve-w-cock">
+    <div class="ck-std" {{if !(multi > 1)}}style="display:none;"{{/if}}>
+        <h4>{{lang.areaStd}}：</h4>
+        <div class="ck-std-list"></div>
+    </div>
+
+
+    {{if allowed}}
+        
+        <h3 class="ck-title">{{lang.areaAll}}</h3>
+        <div class="ck-area-all J_ck-all">
+            <table cellpadding="0" cellspacing="0" border="0" class="ck-table">
+                <tr>
+                {{each allowed as item index}}
+                    {{if index % 4 == 0 && index < allowed.length - 1}}<tr>{{/if}}
+                    <td>
+                        <label title="{{raw[item]}}"><input type="{{if !(multi > 1)}}radio{{else}}checkbox{{/if}}" value="{{item}}">{{raw[item]}}</label>
+                    </td>
+                    {{if index == allowed.length - 1 && (index+1) % 4 > 0}}<td colspan="{{4-(index+1)%4}}"></td>{{/if}}
+                    {{if (index > 0 && index % 4 == 3) || index == allowed.length - 1}}</tr>{{/if}}
+                {{/each}}
+            </table>
+        </div>
+        
+    {{else}}
+
+        <h3 class="ck-title">{{lang.areaHot}}</h3>
+        <div class="ck-area-hot J_ck-hot">
+            <table cellpadding="0" cellspacing="0" border="0" class="ck-table">
+                <tbody>
+                {{each hot as child ps}}
+                    {{if ps % h_col.length == 0}}<tr>{{/if}}
+                        <th>{{child[0]}}</th>
+                        {{each child[1] as item index}}
+                            <td> <label title="{{raw[item]}}"><input type="{{if !(multi > 1)}}radio{{else}}checkbox{{/if}}" {{if type[item]}}class="isTitle"{{/if}} value="{{item}}" parent="{{item.substr(0,2)}}0000">{{raw[item]}}</label> </td>
+                        {{if index == child[1].length - 1 && (index+1) % h_col[ps%h_col.length] > 0}}<td colspan="{{h_col[ps%h_col.length]-(index+1)%h_col[ps%h_col.length]}}"></td>{{/if}}
+                        {{/each}}
+                    {{if ps % h_col.length == h_col.length - 1}}</tr>{{/if}}
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="ck-title">{{lang.areaAll}}</h3>
+        <div class="ck-area-all J_ck-all">
+            <table cellpadding="0" cellspacing="0" border="0" class="ck-table">
+                {{each a_ll as child index}}
+                <tr>
+                    <th>{{child[0]}}</th>
+                    {{each child[1] as item ps}}
+                    <td>
+                        {{if all[parseInt(item, 10)][1].length>1}}
+                        <span title="{{type[item+'0000']}}" data-id="{{item}}0000" data-index="{{parseInt(item, 10)}}">{{raw[item+'0000']}}</span>
+                        {{else}}
+                        <label title="{{type[item+'0000']}}"><input type="{{if !(multi > 1)}}radio{{else}}checkbox{{/if}}" value="{{item}}0000">{{type[item+'0000']}}</label>
+                        {{/if}}
+                    </td>
+                    {{/each}}
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    
+    {{/if}}
+
+</div>

@@ -1,0 +1,46 @@
+<div class="ve-w-cock">
+    <div class="ck-std" {{if !(multi > 1)}}style="display:none;"{{/if}}>
+        <h4>{{lang.postStd}}：</h4>
+        <div class="ck-std-list"></div>
+    </div>
+
+    <h3 class="ck-title">{{lang.postHot}}</h3>
+    <div class="ck-job-hot J_ck-hot">
+        <table cellpadding="0" cellspacing="0" border="0" class="ck-table">
+            {{each hot as child ps}}
+                <tbody>
+                    {{if ps>0}}<tr class="ck-dashed"><td colspan="4"><i></i></td></tr>{{/if}}
+                    <tr>
+                        <th rowspan="{{ceil(child[1].length/3)}}" title="{{child[0]}}"><em>{{child[0]}}：</em></th>
+                        {{each child[1] as item index}}
+                            {{if index > 0 && index % 3 == 0}}</tr>{{if index < child[1].length - 1}}<tr>{{/if}}{{/if}}
+                            <td>
+                                <label title="{{raw[item]}}"><input type="{{if !(multi > 1)}}radio{{else}}checkbox{{/if}}" {{if type[item]}}class="isTitle"{{/if}} value="{{item}}" parent="{{item.substr(0,2)}}00">{{raw[item]}}</label>
+                            </td>
+                            {{if index == child[1].length - 1 && (index+1) % 3 > 0}}<td colspan="{{3-(index+1)%3}}"></td>{{/if}}
+                        {{/each}}
+                    </tr>
+                </tbody>
+            {{/each}}
+        </table>
+    </div>
+
+    <h3 class="ck-title">{{lang.postAll}}</h3>
+    <div class="ck-job-all J_ck-all">
+        <table cellpadding="0" cellspacing="0" border="0" class="ck-table">
+            {{each all as child index}}
+                {{if index % 5 == 0 && index < all.length - 1}}<tr>{{/if}}
+                <td>
+                    {{if child[1].length>1}}
+                        <span title="{{type[child[0]]}}" data-id="{{child[0]}}" data-index="{{index}}">{{type[child[0]]}}</span>
+                    {{else}}
+                        <label title="{{type[child[0]]}}"><input type="{{if !(multi > 1)}}radio{{else}}checkbox{{/if}}" value="{{child[0]}}">{{type[child[0]]}}</label>
+                    {{/if}}
+                </td>
+                {{if index == all.length - 1 && (index+1) % 5 > 0}}<td colspan="{{5-(index+1)%5}}"></td>{{/if}}
+                {{if (index > 0 && index % 5 == 4) || index == all.length - 1}}</tr>{{/if}}
+            {{/each}}
+        </table>
+    </div>
+
+</div>

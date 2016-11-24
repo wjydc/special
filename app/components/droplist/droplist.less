@@ -1,0 +1,72 @@
+.cw-droplist-i {
+  border: 1px solid #ffa246;
+  background: #fff;
+  padding: 1px 0 2px;
+  overflow: auto;
+  position: absolute;
+  z-index: 30;
+  color: #333;
+  line-height: 30/14em;
+  ul,
+  .droplist-box {
+    margin: 0;
+    padding: 0;
+  }
+  li,
+  a {
+    display: block;
+    margin: 0 2px;
+    cursor: default;
+    padding: 0 0.429em 0;
+    &.active {
+      background: #ddd;
+    }
+  }
+  &.active {
+    li.hover {
+      color: #fff;
+      background: #ffa145;
+    }
+  }
+  a:hover {
+    color: #fff;
+    background: #ffa145;
+  }
+}
+
+
+/*
+.cw-droplist-box {
+  border: 1px solid #ffa246;
+  background: #fff;
+  overflow: auto;
+  position: absolute;
+  z-index: 30;
+  color: #333;
+  line-height: 30/14em;
+
+  left: 200px;
+  top: 200px;
+
+  table {
+    width: 100%;
+    margin-top: -1px;
+  }
+  tbody {
+    border: 2px solid #fff;
+  }
+  td {
+    cursor: default;
+    padding: 0 0.429em 0;
+    &.action {
+      background: #ddd;
+    }
+  }
+  &.action {
+    td.hover {
+      color: #fff;
+      background: #ffa145;
+    }
+  }
+}
+*/

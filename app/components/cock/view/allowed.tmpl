@@ -1,0 +1,22 @@
+<div class="ve-w-cock">
+    <div class="ck-std" {{if !(multi > 1)}}style="display:none;"{{/if}}>
+        <h4>{{lang.allowedStd}}：</h4>
+		<div class="ck-std-list"></div>
+    </div>
+
+    <h3 class="ck-title">{{lang.allowedAll}}</h3>
+    <div class="ck-allowed-all J_ck-all">
+        <table cellpadding="0" cellspacing="0" border="0" class="ck-table">
+            <tr>
+			{{each all as item index}}
+				{{if index % 4 == 0 && index < all.length - 1}}<tr>{{/if}}
+                <td>
+                    <label title="{{raw[item[0]]}}"><input type="{{if !(multi > 1)}}radio{{else}}checkbox{{/if}}" value="{{item[0]}}">{{raw[item[0]]}}</label>
+                </td>
+				{{if index == all.length - 1 && (index+1) % 4 > 0}}<td colspan="{{4-(index+1)%4}}"></td>{{/if}}
+                {{if (index > 0 && index % 4 == 3) || index == all.length - 1}}</tr>{{/if}}
+			{{/each}}
+        </table>
+    </div>
+
+</div>

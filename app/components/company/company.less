@@ -1,0 +1,275 @@
+.w-company {
+  width: 990px;
+  margin: auto;
+  font-size: 14px;
+  .company-left,
+  .company-right {
+    padding-top: 20px;
+  }
+  .company-left {
+    float: left;
+    width: 678px;
+    margin-bottom: 20px;
+  }
+  .company-right {
+    float: right;
+    width: 290px;
+  }
+  .super-info {
+    padding-bottom: 25px;
+    border-bottom: 1px dashed #e6e6e6;
+    .info-box {
+      float: right;
+      width: 464px;
+    }
+    .vip-year {
+      float: right;
+      width: 86px;
+      height: 28px;
+      line-height: 28px;
+      background: url(v.png);
+      padding-left: 27px;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #333;
+      width: 332px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-bottom: 26px;
+    }
+    ul {
+      overflow: hidden;
+      margin: 0 -16px -12px 0;
+      li {
+        float: left;
+        width: 102px;
+        height: 31px;
+        line-height: 31px;
+        background: #fef4eb;
+        border: 1px solid #fce6d2;
+        margin: 0 16px 12px 0;
+        text-align: center;
+        color: #f0841e;
+      }
+    }
+  }
+  .company-logo {
+    width: 198px;
+    height: 128px;
+    float: left;
+    border: 1px solid #eee;
+  }
+  h4 {
+    font-size: 16px;
+    line-height: 1em;
+    color: #666;
+    padding-left: 6px;
+    border-left: 3px solid #f0841e;
+    span {
+      font-weight: normal;
+    }
+  }
+  .company-info {
+    padding: 17px 0 0;
+    margin-bottom: 20px;
+    .info-box {
+      margin: 18px 0 64px;
+      position: relative;
+      font-size: 14px;
+      height: 285px;
+      overflow: hidden;
+      pre {
+        display: none;
+      }
+      &.init {
+        height: auto;
+        pre {
+          display: block;
+          height: 285px;
+          overflow: hidden;
+        }
+        .info-box-open {
+          display: block;
+        }
+        &.opened {
+          pre {
+            height: auto;
+          }
+        }
+      }
+    }
+    .info-box-open {
+      background: #fff;
+      padding: 6px;
+      border-radius: 5px;
+      color: #1f97d3;
+      float: right;
+      display: none;
+      cursor: pointer;
+    }
+  }
+  .company-url {
+    line-height: 26px;
+    a {
+      color: #1f97d3;
+    }
+  }
+  .job-filter {
+    padding: 13px 10px;
+    background: #f9f9f9;
+    margin: 21px 0 12px;
+    .select {
+      width: 80px;
+      i {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    a {
+      color: #555;
+    }
+    .cw-droplist-i a:hover {
+      color: #fff;
+    }
+  }
+  .company-alljob {
+    li {
+      line-height: 29px;
+      padding: 11px 14px 10px 5px;
+      border-bottom: 1px dashed #e6e6e6;
+      display: none;
+      overflow: hidden;
+      .job-link {
+        font-weight: normal;
+        display: block;
+        width: 519px;
+        height: 29px;
+        a,
+        span {
+          float: inherit;
+          display: inline-block;
+        }
+        a {
+          max-width: 400px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          color: #2a7ac9;
+        }
+        span {
+          color: #D90000;
+        }
+      }
+      strong {
+        color: #f0841f;
+        float: right;
+        margin-top: -14px;
+      }
+      span {
+        float: left;
+        color: #999999;
+        margin-right: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      &.postdata.areadata {
+        display: block;
+      }
+    }
+    .pageJump {
+      float: right;
+      margin-top: 30px;
+    }
+  }
+  .base-info {
+    width: 256px;
+    padding: 10px 16px 24px;
+    border: 1px solid #eee;
+    background: #f8f8f8;
+    color: #808080;
+    line-height: 32px;
+    h4 {
+      font-size: 16px;
+      line-height: 1.8em;
+      color: #666666;
+      margin-right: -5px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      border-left: 0;
+      padding-left: 0;
+    }
+    strong {
+      font-weight: normal;
+      color: #333;
+      display: inline-block;
+      width: 184px;
+      vertical-align: top;
+      word-break: break-all;
+      word-wrap: break-word;
+    }
+    .follow {
+      background: #fff7f0;
+      border: 1px solid #f0841e;
+      color: #f0841e;
+      line-height: 37px;
+      height: 37px;
+      width: 216px;
+      border-radius: 3px;
+      outline: none;
+      display: block;
+      margin: 16px auto 0;
+      span {
+        background: url(../detail/add.png) no-repeat 5px center;
+        padding-left: 24px;
+      }
+    }
+    .star {
+      background: url(star.png);
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+    }
+  }
+  .hotel-style {
+    border: 1px solid #eee;
+    padding: 5px 0;
+    color: #999;
+    line-height: 26px;
+    margin-top: 25px;
+    h4 {
+      border: 0;
+      padding-left: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #666;
+      margin-bottom: 5px;
+      line-height: 36px;
+    }
+    img {
+      width: 260px;
+      display: block;
+      margin: 0 auto 20px;
+      -webkit-box-shadow: 1px 1px 0px rgba(255, 255, 255, 1), 2px 2px 0 rgba(0, 0, 0, .2), 3px 3px 0px rgba(255, 255, 255, 1), 4px 4px 0 rgba(0, 0, 0, .1);
+      -moz-box-shadow: 1px 1px 0px rgba(255, 255, 255, 1), 2px 2px 0 rgba(0, 0, 0, .2), 3px 3px 0px rgba(255, 255, 255, 1), 4px 4px 0 rgba(0, 0, 0, .1);
+      box-shadow: 1px 1px 0px rgba(255, 255, 255, 1), 2px 2px 0 rgba(0, 0, 0, .2), 3px 3px 0px rgba(255, 255, 255, 1), 4px 4px 0 rgba(0, 0, 0, .1);
+    }
+  }
+  .bd_share {
+    float: right;
+    color: #999;
+  }
+}
+
+.block_box {
+  display: none;
+}

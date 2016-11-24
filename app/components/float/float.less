@@ -1,0 +1,100 @@
+.w-float {
+  position: fixed;
+  right: 0;
+  top: 20px;
+  width: 194px;
+  z-index: 10;
+  @media (max-width: 640px) {
+    display: none;
+  }
+  .float-main {
+    background: #fffdfb url(index_04.png) no-repeat;
+    padding-top: 102px;
+  }
+  .float-box {
+    border: 1px solid #e5e5e5;
+    border-top: 0;
+    a {
+      display: block;
+      height: 36px;
+      line-height: 36px;
+      padding-top: 4px;
+      padding-left: 18px;
+      font-size: 14px;
+      color: #333;
+      margin: 0 -1px;
+      text-decoration: none;
+      margin-bottom: 1px;
+      position: relative;
+      &:hover {
+        background: #d65656;
+        color: #fff;
+      }
+    }
+    a+ a:before {
+      content: '';
+      display: block;
+      border-bottom: 1px dashed #f1ede8;
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 100%;
+    }
+  }
+  .vcode {
+    padding: 6px 0 10px;
+    text-align: center;
+  }
+  .float-share {}
+  .action-box {
+    margin: 12px -13px 0 0px;
+    .page-top, span {
+      float: left;
+      width: 57px;
+      height: 57px;
+      margin-right: 12px;
+      position: relative;
+    }
+  }
+  .share-box {
+    display: none;
+    position: absolute;
+    width: 191px;
+    height: 55px;
+    right: 0;
+    top: 0;
+    background: #fffcf8;
+    border: 1px solid #dfdfdf;
+    line-height: 55px;
+    text-align: center;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      float: initial;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+    }
+    a, img {
+      vertical-align: middle;
+      margin: 0 6px;
+    }
+  }
+  .btn-share {
+    .bds_weixin {
+      background: url(http://f3.v.veimg.cn/ve/special/201607/zw/index_22.png) no-repeat center !important;
+    }
+    .bds_sqq {
+      background: url(http://f3.v.veimg.cn/ve/special/201607/zw/index_24.png) no-repeat center !important;
+    }
+    .bds_tsina {
+      background: url(http://f3.v.veimg.cn/ve/special/201607/zw/index_26.png) no-repeat center !important;
+    }
+  }
+
+  .btn-share:hover .share-box {
+    display: block;
+  }
+}

@@ -1,0 +1,58 @@
+<div>
+
+    {{if !data.length}}
+        <div class="no-jobs">当前没有符合条件的职位，请重新设置筛选条件</div>
+    {{/if}}
+
+    {{each data as $item $key}}
+
+        {{if $top!=0 && $key==0}}<div class="strong">{{/if}}
+
+        <div class="job-child" data-id="{{$item.job_id}}">
+            <ul class="base">
+                <li class="job">
+                    <input type="checkbox"><a
+                        href="//job.veryeast.cn/{{$item.c_userid}}/{{$item.job_id}}" target="_blank" class="ellipsis">{{$item.company_job_name}}</a><i
+                        class="buf">
+                        {{if $item.is_pressing_job == 1}}（急）{{/if}}
+                        {{if $item.is_reserve_job == 1}}（储备）{{/if}}
+                    </i>
+                    {{if inArray(parseInt($item.contact_display_status, 10), [1, 6, 7, 8]) > -1}}<i class="call"></i>{{/if}}
+                </li>
+                <li class="hotel">
+                    <a href="//job.veryeast.cn/{{$item.c_userid}}" target="_blank" class="comp ellipsis">{{$item.company_name}}</a><a
+                       href="http://www.veryeast.cn/AdsShow/product/job/EvaluateIndex" target="_blank" title="雇主指数" class="compnum">{{$item.employer_index}}</a>
+                </li>
+                <li class="area">
+                    <span class="ellipsis">{{$item.job_province.replace(/[省市县区镇乡村]$/, '')}}{{if $item.job_city}}{{'-' + $item.job_city.replace(/[省市县区镇乡村]$/, '')}}{{/if}}</span>
+                </li>
+                <li class="timer">
+                    <span>{{$item.job_update_time}}</span>
+                </li>
+                <li class="craze">
+                    <i class="p{{$item.job_apply_num <=10 ? 0 : $item.job_apply_num > 30 ? 2 : 1}}" title="已有{{$item.job_apply_num}}人申请"></i>
+                </li>
+            </ul>
+
+            <div class="all" {{if whole}} style="display:block"{{/if}}>
+                <div class="attr">
+                    经验：<i>{{if $item.work_year_min}}{{$item.work_year_min + '年以上'}}{{else}}不限{{/if}}</i>
+                    学历：<i>{{$DROPDATA_INDEX.degree_id[$item.degree_id]}}</i>
+                    薪资：<i>{{if $item.salary_min!=0 || $item.salary_max!=0}}{{$item.salary_min + '-' + $item.salary_max}}{{else}}面议{{/if}}</i>
+                    食宿：<i>{{$DROPDATA_INDEX.rations_quarters[$item.rations_quarters]}}</i>
+                    企业性质：<i>{{$DROPDATA_INDEX.company_type[$item.company_type]}}{{if $item.star_level}}{{'(' + $DROPDATA_INDEX.star_level[$item.star_level] + ')'}}{{/if}}</i>
+                    <div class="brief">{{=$item.job_description}}</div>
+                </div>
+                <div class="operate">
+                    <a href="javascript:;" class="apply"><span>立即申请</span><i></i></a>
+                    <a href="javascript:;" class="collect {{if inArray($item.job_id, fav) != -1}}active{{/if}}"><i></i>收藏职位</a>
+                </div>
+                <i class="clear"></i>
+            </div>
+        </div>
+
+        {{if $top!=0 && $key==$top-1}}</div>{{/if}}
+
+    {{/each}}
+
+</div>

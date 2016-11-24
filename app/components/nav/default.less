@@ -1,0 +1,31 @@
+@bgc: #ef8217;
+@fontc: #ffe3c8;
+@hoverc: #fff;
+@fontsize: 16px;
+@width: 990px;
+
+
+.ve-nav-default {
+  background: @bgc;
+  .list, a {
+    font-size: @fontsize;;
+    color: @fontc;
+  }
+  .list {
+    width: @width;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  a, i {
+    padding: 0 15px;
+    line-height: 2.5em;
+    display: inline-block;
+  }
+  a {
+    &:hover {
+      color: @hoverc;
+    }
+  }
+}
